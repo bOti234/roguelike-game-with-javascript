@@ -1,0 +1,610 @@
+html, body, #canvas 
+{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+body
+{
+	background:darkgreen;
+}
+
+#monitorDead
+{
+	position:absolute;
+	z-index:999;
+	top:24%;
+	left:40%;
+	text-align:center;
+	width:20%;
+	border:3px solid black;
+	background:#421111;
+	border-radius:10px;
+	padding:7px;
+	color:gold;
+	-webkit-user-select:none;
+	cursor:default;
+}
+
+.scoreLementGomb
+{
+	width:45%;
+	cursor:pointer;
+	-webkit-user-select:none;
+}
+
+.scoreLementGomb:hover , #restartHaLoggedOut:hover , #jatek_start_gomb:hover
+{
+	color:#421111;
+	background:gold;
+	border:2px solid #421111;
+	cursor:pointer;
+}
+
+#restartHaLoggedOut
+{
+	margin-top:5px;
+	width:25%;
+	cursor:pointer;
+	-webkit-user-select:none;
+}
+
+.belepes
+{
+	top:48%;
+	left:43.6%;
+	height:3%;
+	position:absolute;
+	z-index:9999;
+}
+
+#felh, #felh2, .pass, #email
+{
+	border:3px solid black;
+	border-radius:5px;
+	width: 200px;
+	height:40px;
+	margin-bottom:10px;
+}
+
+#belepgomb
+{
+	
+	width:210px;
+	height:25px;
+}
+
+#signinredirectgomb
+{
+	cursor:pointer;
+	margin-bottom:5px;
+}
+
+#regredirectgomb
+{
+	cursor:pointer;
+	margin-top:5px;
+}
+
+.visszagomb
+{
+	cursor:pointer;
+	padding-top:5px;
+	font-size:20px;
+	width:10%;
+	font-weight:bold;
+}
+
+#regszoveg
+{
+	border:3px solid black;
+	border-radius:10px;
+	background:#421111;
+	padding:7px;
+	color:gold;
+}
+
+#jatek_start_gomb
+{
+	left:40%;
+	width:20%;
+	height:3.5%;
+}
+
+#szurkehatter , #szurkehatter2
+{
+	position:absolute;
+	width:110%;
+	height:110%;
+	background:rgba(120, 120, 120, 0.5);
+	z-index:999;
+}
+
+#logoTarto
+{
+	position:absolute;
+	top:15%;
+	left:30%;
+	width:40%;
+	z-index:9999;
+	-webkit-user-select:none;
+}
+
+#logoKep
+{
+	width:100%;
+}
+
+#keptarto
+{
+	min-height:250px;
+	overflow:auto;
+	min-width:40.7%;
+	/*border:1px solid red;*/
+	top:57%;
+	left:29.6%;
+	text-align:center;
+}
+
+.cKep
+{
+	margin:16px;
+	margin-top:20px;
+	border:2px solid black;
+	border-radius:5px;
+	background:lightgreen;
+	cursor:pointer;
+	-webkit-user-select:none;
+}
+
+.cKep:hover
+{
+	margin:15px;
+	border:3px solid gold;
+}
+
+#kepstatok
+{
+	text-align:center;
+	display:none; 
+	position:absolute; 
+	top:75%; 
+	left:44.5%; 
+	width:11%;
+	height:7%;	
+	z-index:1001; 
+	border:3px solid black;
+	border-radius:10px; 
+	background:#e3a25d; 
+	padding:7px;
+}
+
+#kepstatszoveg
+{
+	float:left;
+	padding-bottom:5px;
+}
+
+#hat
+{
+	width:40px;
+	height:60px;
+}
+
+#canvas
+{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	cursor:default;
+	/*border:1px solid red;*/
+	/*background:#07af07;*/
+	background:url(../images/hatter.jpg);
+	background-repeat:repeat;
+}
+
+/*#border
+{
+	position:absolute;
+	left:-530px;
+	top:-890px;
+	width:3040px;
+	height:3820px;
+	border:10px solid black;
+	border-radius:5px;
+}*/
+
+#nagy_wave_mutato_hatter
+{
+	position:absolute; 
+	top:40%;
+	left:1%; 
+	width:100%; 
+	height:20%;
+	font-size:40px; 
+	color:white; 
+	display:none; 
+	opacity:0;
+	z-index:9999999;
+	-webkit-user-select:none;
+}
+
+#skill_tree, #ability_lista
+{
+	z-index:8000;
+	position:absolute;
+	background:#421111;
+	top:10px;
+	left:-20%;
+	border:2px solid black;
+	min-height:400px;
+	width:18%;
+	display:none;
+	-webkit-user-select:none;
+}
+
+#ability_lista
+{
+	left:101%;
+	width:18%;
+	min-height:300px;
+}
+
+#ability_doboz
+{
+	position:absolute;
+	/*border:2px solid #cccccc;*/
+	top:81%;
+	left:30.5%;
+	width:60%;
+	height:7%;
+}
+
+.ability_holder
+{
+	float:left;
+	margin-bottom:10px;
+	margin-top:10px;
+	margin-left:2.7%;
+	margin-right:2.7%;
+	width:5%;
+	height:70%;
+	border:3px solid #aaaaaa;
+	border-radius:15px;
+	background:#efefef;
+	cursor:pointer;
+	-webkit-user-select:none;
+}
+
+#vegsoSkill_doboz
+{
+	position:absolute;
+	top:90%;
+	left:69.5%;
+	width:6%;
+	height:9%;
+	z-index:9999;
+}
+
+.vegsoSkill
+{
+	width:46%;
+	height:46%;
+	float:left;
+	border:2px solid black;
+	background:#cccccc;
+	border-radius:25px;
+	-webkit-user-select:none;
+}
+
+#skill_point_doboz
+{
+	color:gold;
+	padding-left:5px;
+	user-select:none;
+}
+
+#level_min_doboz
+{
+	z-index:9999;
+	position:absolute;
+	top:78%;
+	color:red;
+	font-weight:bold;
+	font-size:20px;
+	left:38%;
+	width:30%;
+	height:3%;
+	-webkit-user-select:none;
+	display:none;
+}
+
+#csik_doboz , #csik_doboz_hatter
+{
+	position:absolute;
+	top:90%;
+	left:30%;
+	/*border:4px solid black;*/
+	width:40%;
+	height:9%;
+	-webkit-user-select:none;
+}
+
+#csik_doboz
+{
+	z-index:9990;
+}
+
+.csik
+{
+	margin-left:3%;
+	margin-right:3%;
+	margin-bottom:0.5%;
+	width:94%;
+	height:25%;
+	/*border:2px solid blue;*/
+	border-radius:25px;
+	-webkit-user-select:none;
+}
+
+#shield_bar
+{
+	margin:0px auto;
+	height:10%;
+	width:80%;
+}
+
+#shield_bar_hatter
+{
+	margin:0px auto;
+	border:2px solid black;
+	background:black;
+	height:10%;
+	width:80%
+}
+
+.ertekek
+{
+	position:absolute;
+	left:45%;
+	height:20%;
+	width:10%;
+	margin:auto;
+	margin-top:4px;
+	text-align:center;
+	cursor:pointer;
+	user-select:none;
+	-webkit-user-select:none;
+}
+
+.ertekek:hover
+{
+	font-size:120%;
+	font-style:bold;
+}
+
+#hp_ertek
+{
+	color:#980000;
+}
+
+#mana_ertek
+{
+	color:darkblue;
+}
+
+#xp_ertek
+{
+	color:white;
+}
+
+#shield_ertek
+{
+	padding-top:3px;
+	padding-bottom:3px;
+	width:6%;
+	background:#cccccc;
+	border-radius:25px;
+	color:#111111;
+	font-size:16px;
+	left:47%;
+	top:-28px;
+}
+
+#scoremutato
+{
+	display:none;
+	top:90%;
+	background:white;
+	border:2px solid black;
+	text-align:center;
+	font-size:25px;
+	color:darkblue;
+	-webkit-user-select:none;
+}
+
+#level
+{
+	position:absolute;
+	top:93%;
+	left:18%;
+	border:4px solid yellow;
+	background:lime;
+	text-align:center;
+	width:10%;
+	font-size:35px;
+	color:white;
+	height:4%;
+	-webkit-user-select:none;
+}
+
+#adminTools_doboz
+{
+	position:absolute;
+	z-index:9999;
+	top:93%;
+	left:10%;
+	width:10%;
+	height:4%;
+	-webkit-user-select:none;
+}
+
+.ablak , ul , li
+{
+	z-index:999;
+}
+
+ul
+{
+	/*border:2px solid red;*/
+	width:100%;
+	min-height:250px;
+	list-style:none;
+	padding:0px;
+	user-select:none;
+}
+
+ol.scorelista
+{
+	padding-left:15px;
+	user-select:none;
+}
+
+.SkillKep
+{
+	height:100%;
+    width:100%;
+}
+
+.abKep
+{
+	margin:0px;
+}
+
+li
+{
+	/*border:1px solid green;*/
+	background:brown;
+	width:17.5%;
+	height:25%;
+	list-style:none;
+	margin-left:2.5%;
+	margin-right:2.5%;
+	margin-bottom:3.3%;
+	float:left;
+	cursor:pointer;
+}
+
+li.egy_helyezet
+{
+	background:none;
+	width:100%;
+	height:100%;
+	list-style-type:decimal;
+	margin-left:0%;
+	margin-right:0%;
+	margin-bottom:2%;
+	float:none;
+	cursor:pointer;
+}
+
+li.egy_ab
+{
+	/*overflow:auto;*/
+	width:27.5%;
+	min-height:115px;
+	vertical-align:bottom;
+}
+
+.SkillNev, .abNev
+{
+	color:gold;
+	overflow:none;
+	margin:0px auto;
+	font-size:10px;
+	text-align:center;
+	height:23px;
+}
+
+.abNev
+{
+	width:auto;
+	font-size:15px;
+}
+
+.skill_leiras, .ab_leiras
+{
+	position:absolute;
+	top:400px;
+	left:-2px;
+	width:100%;
+	min-height:105px;
+	border:2px solid black;
+	background:#bf865e;
+	display:none;
+}
+
+.ab_leiras
+{
+	top:300px;
+	min-height:155px;
+}
+
+.skill_adat, .ab_adat
+{
+	color:#1d671d;
+	float:right;
+	/*border:1px solid blue;*/
+	position:absolute;
+    bottom:0;
+    right:0;
+	font-size:15px;
+	font-style:oblique;
+	text-align:right;
+	margin-right:5px;
+}
+
+.adat_darab
+{
+	float:right;
+	padding-left:4px;
+}
+
+.skill_darab
+{
+	text-align:center;
+	font-size:12px;
+	color:white;
+}
+
+.mastered_skill
+{
+	border:3px solid gold;
+	margin-bottom:0%;
+}
+
+.mastered_skill2
+{
+	border:3px solid gold;
+	margin-bottom:3.3%;
+}
+
+li.unmastered_skill:hover, li.egy_ab:hover
+{
+	border:3px solid red;
+	margin-bottom:0px;
+}
+
+#skill_4:hover , #skill_8:hover
+{
+	margin-bottom:3.3%;
+}
+
+li.egy_skill:hover .skill_leiras, li.egy_ab:hover .ab_leiras
+{
+	display:block;
+}
